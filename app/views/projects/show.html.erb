@@ -1,0 +1,9 @@
+
+<h1><%= @project.name %></h1>
+<%= @project.name %>
+<%= @project.description %>
+<%= @project.goal %>
+
+<%= form_tag person_path(@project.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@project.name}" %>
+<% end %>

@@ -1,0 +1,21 @@
+
+<h1>Change project details</h1>
+
+<%= form_for @project do |f| %>
+  <%= f.label 'name' %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label 'Description' %><br>
+  <%= f.text_area :description %><br>
+
+  <%= f.label 'Goal' %><br>
+  <%= f.text_area :goal %><br>
+
+  <%= f.submit "Submit" %>
+  
+  <%= form_tag project_path, method: "destroy" do %>
+    <%= submit_tag "Delete Project" %>
+  <% end %>
+
+
+<% end %>
